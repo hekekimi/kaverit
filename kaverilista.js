@@ -33,6 +33,7 @@ function lisaaUusiKaveri()
             
         }
     lista.style.visibility = "visible";
+    document.getElementById("otsikko").innerText = "Kaverit:"
     }
 
     
