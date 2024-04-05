@@ -20,7 +20,7 @@ function lisaaUusiKaveri()
     
 
 
-    if (kaverit.length == 5)
+    if (kaverit.length == 10)
     
     {
         
