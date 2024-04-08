@@ -19,7 +19,8 @@ painike3.addEventListener("click", jarjestaKaverit)
 function lisaaKaveri()
 {
 
-let syote = document.querySelector("#main input[type ='text']").value;
+let syote_orig = document.querySelector("#main input[type ='text']").value;
+let syote = syote_orig.trim();
 if(syote.length < 1)
     {
         window.alert("Anna kaverin nimi!")
@@ -35,13 +36,17 @@ kaverit.push(syote);
 
 document.querySelector('#itemList').appendChild(kaveriElementti);
 document.getElementById('kaverit').innerHTML = "Kaverit";
+console.log(kaverit);
 
 
 
 }
 
-function poistaKaveri() {
-    let syote = document.querySelector("#main input[type='text']").value;
+function poistaKaveri() 
+{
+    let syote_orig = document.querySelector("#main input[type='text']").value;
+    let syote = syote_orig.trim();
+
     if (syote.length < 1) {
         window.alert("Anna kaverin nimi!");
         return;
@@ -57,53 +62,36 @@ function poistaKaveri() {
 
         for(let i = 0; i< kaveriElementit.length; i++)
         {
-            if (kaveriElementit[i].innerText === syote)
+            if (kaveriElementit[i].textContent === syote)
             {
                 kaverit_lista.removeChild(kaveriElementit[i]);
                 if (kaveriElementit.length ==0)
                 {
                 
                 document.getElementById('kaverit').innerHTML = "";
+                }
 
-
-                } 
+                break;
+                
+                
             }
-            
-
-
-
         }
-
-
-        
     }
-     else
-    {
-        window.alert("Kaveria ei löytynyt!");
-    }
-
-    
 }
-
-
-
-    
-
-
 
 function jarjestaKaverit()
 {
-kaverit.sort()
-console.log(kaverit)
-let aakkos_kaverit = document.querySelector('#itemList');
-aakkos_kaverit.innerHTML = "";
-for (i = 0; i< kaverit.length; i++)
-{
-let kaveriElementti = document.createElement("li");
-let kaveriNimi = document.createTextNode(kaverit[i]);
-kaveriElementti.appendChild(kaveriNimi);
-kaveriElementti.className = "list-item";
-aakkos_kaverit.appendChild(kaveriElementti);
+    kaverit.sort()
+    console.log(kaverit)
+    let aakkos_kaverit = document.querySelector('#itemList');
+    aakkos_kaverit.innerHTML = "";
+    for (i = 0; i< kaverit.length; i++)
+    {
+    let kaveriElementti = document.createElement("li");
+    let kaveriNimi = document.createTextNode(kaverit[i]);
+    kaveriElementti.appendChild(kaveriNimi);
+    kaveriElementti.className = "list-item";
+    aakkos_kaverit.appendChild(kaveriElementti);
 
 
 
