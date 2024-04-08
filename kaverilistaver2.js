@@ -77,6 +77,13 @@ function poistaKaveri()
             }
         }
     }
+    else
+    {
+        window.alert("Kaveria ei löytynyt!");
+    }
+
+
+
 }
 
 function jarjestaKaverit()
