@@ -26,14 +26,17 @@ function lisaaUusiKaveri()
         
         for (let i = 0; i < kaverit.length; i++) 
         {
-        console.log(kaverit[i])
+        
         let listaElementti = document.createElement("li");
         listaElementti.innerText = kaverit[i]
         lista.appendChild(listaElementti)
-            
+        
         }
     lista.style.visibility = "visible";
-    document.getElementById("otsikko").innerText = "Kaverit:";
+    document.getElementById("kaveriotsikko").style.visibility = "visible";
+    
+    
+    
     }
 
     

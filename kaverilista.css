@@ -2,14 +2,6 @@
 
 
 
-.bgimage{
-
-
-  background-image: url("colour.jpg");
- 
-  background-size: cover;
-  
-}
 
 
 
@@ -17,17 +9,6 @@
 
 
 
-
-
-#nappula
-{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
 
 #buddyList
 {
@@ -39,5 +20,12 @@ border-radius: 10px;
 visibility: hidden;
 background: linear-gradient(30deg, #bfda45,#da691e, #0ca8e6, #133b92,#9e1c93);
 
+
 }
 
+#kaveriotsikko
+{
+
+visibility: hidden;
+text-shadow: 2px 2px #da691e;
+}
