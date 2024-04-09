@@ -7,3 +7,10 @@ body
 background-image: url("green.jpg");
 
 }
+
+
+.painike:hover
+ {
+background-color: orangered;
+
+ }
